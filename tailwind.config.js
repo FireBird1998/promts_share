@@ -13,7 +13,10 @@ module.exports = {
       },
       colors: {
         'primary-orange': '#FF5722',
-      }
+      },
+      backgroundImage: (theme) => ({
+        'blue-gradient': `linear-gradient(to right, ${theme('colors.blue.600')}, ${theme('colors.cyan.600')})`,
+      }),
     },
   },
   plugins: [],
