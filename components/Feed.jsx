@@ -9,7 +9,7 @@ const PromtCardList = ({data, handelTagClick}) => {
   return (
     <div className='promt_layout mt-16'>
       {data.map((promt, index) => (
-        <PromtCard key={promt._id} promt={promt} handelTagClick={handelTagClick}/>
+        <PromtCard style={'mt-5'} key={promt._id} promt={promt} handelTagClick={handelTagClick}/>
       ))}
     </div>
   )

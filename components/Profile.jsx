@@ -13,9 +13,10 @@ const Profile = ({name, desc, data, handleEdit, handleDelete}) => {
       <div className='promt_layout mt-10'>
         {data.map((promt, index) => (
           <PromtCard 
+            style={'mt-5'}
             key={promt._id} 
             promt={promt} 
-            handleEdit={() => handleEdit && handleDelete(promt)}
+            handleEdit={() => handleEdit && handleEdit(promt)}
             handleDelete={() => handleDelete && handleDelete(promt)}
           />
 

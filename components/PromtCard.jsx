@@ -7,7 +7,7 @@ import { useSession } from 'next-auth/react'
 import { usePathname, useRouter } from 'next/navigation'
 
 
-const PromtCard = ({ promt, handleTagClick, handleEdit, handleDelete }) => {
+const PromtCard = ({ promt, handleTagClick, handleEdit, handleDelete, style }) => {
   const [copy, setcopy] = useState("")
   const { data: session } = useSession()
   const pathName = usePathname()
@@ -23,7 +23,7 @@ const PromtCard = ({ promt, handleTagClick, handleEdit, handleDelete }) => {
   }
 
   return (
-    <div className='prompt_card'>
+    <div className={`prompt_card ${style}`}>
       <div className='flex justify-between items-start gap-5'>
         <div className='flex-1 flex justify-start items-start gap-3 cursor-pointer'>
           <Image 
@@ -57,7 +57,7 @@ const PromtCard = ({ promt, handleTagClick, handleEdit, handleDelete }) => {
       <p className='font-inter text-sm blue_gradient cursor-pointer'
         onClick={() => handleTagClick && handleTagClick(promt.tag)}
       >
-        {promt.tag}
+        #{promt.tag}
       </p>
 
 
