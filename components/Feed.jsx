@@ -7,7 +7,7 @@ import PromtCard from './PromtCard';
 
 const PromtCardList = ({data, handelTagClick}) => {
   return (
-    <div className='promt_layout mt-16'>
+    <div className='prompt_layout mt-16'>
       {data.map((promt, index) => (
         <PromtCard style={'mt-5'} key={promt._id} promt={promt} handelTagClick={handelTagClick}/>
       ))}
@@ -48,6 +48,7 @@ const Feed = () => {
           className='search_input peer'
         />
       </form>
+
       <PromtCardList
         data={posts}
         handelTagClick={() => {}}
